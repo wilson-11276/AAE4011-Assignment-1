@@ -20,6 +20,7 @@ This ROS package implements a real-time vehicle detection system using YOLOv5 de
 3. **Visualization**: Bounding boxes with class labels
 4. **Statistics**: Real-time detection counting
 5. **GUI**: Tkinter-based interface for playback control
+
 ## Repository Structure
 ```text
 vehicle_detection_ros/
@@ -39,14 +40,7 @@ vehicle_detection_ros/
 ├── README.md
 └── .gitignore
 ```
-## Requirements
-- Ubuntu 20.04 / 22.04
-- ROS Noetic / Melodic
-- Python 3.8+
-- PyTorch
-- OpenCV
-- YOLOv5
-
+## How to Run 
 ## Installation
 ```bash
 # Create catkin workspace
@@ -64,6 +58,37 @@ rosdep install --from-paths src --ignore-src -r -y
 catkin_make
 source devel/setup.bash
 ```
+### Extract images from rosbag
+``` bash
+rosrun vehicle_detection extract_images.py --bag /path/to/rosbag.bag --topic /camera/image_raw
+```
+### Launch detection pipeline
+``` bash
+# Launch with default settings
+roslaunch vehicle_detection detection_pipeline.launch
+
+# Launch with custom bag file
+roslaunch vehicle_detection detection_pipeline.launch bag_file:=/path/to/your/bag.bag
+```
+### Run individual components
+``` bash
+# Terminal 1: Start detector
+rosrun vehicle_detection vehicle_detector.py
+
+# Terminal 2: Start UI
+rosrun vehicle_detection detection_ui.py
+
+# Terminal 3: Play rosbag
+rosbag play /path/to/rosbag.bag
+```
+## Requirements
+- Ubuntu 20.04 / 22.04
+- ROS Noetic / Melodic
+- Python 3.8+
+- PyTorch
+- OpenCV
+- YOLOv5
+
 ## Video
 ## Reflection
 
