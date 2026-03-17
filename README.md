@@ -1,4 +1,6 @@
-# Vehicle Detection ROS Package
+# AAE4011 Assignment 1 — Q3: ROS-Based Vehicle Detection from Rosbag
+
+> **Student Name:** [Wu Chun Him] | **Student ID:** [25016333D] | **Date:** [16-3-2026]
 
 ## Overview
 This ROS package implements a real-time vehicle detection system using YOLOv5 deep learning model. It processes images from a ROS bag file, detects vehicles (cars, trucks, buses, motorcycles), and displays results with a user-friendly GUI.
@@ -18,7 +20,25 @@ This ROS package implements a real-time vehicle detection system using YOLOv5 de
 3. **Visualization**: Bounding boxes with class labels
 4. **Statistics**: Real-time detection counting
 5. **GUI**: Tkinter-based interface for playback control
-
+## Repository Structure
+```text
+vehicle_detection_ros/
+├── src/
+│   └── vehicle_detection/
+│       ├── __init__.py
+│       ├── scripts/
+│       │   ├── extract_images.py
+│       │   ├── vehicle_detector.py
+│       │   └── detection_ui.py
+│       ├── launch/
+│       │   └── detection_pipeline.launch
+│       ├── config/
+│       │   └── detector_config.yaml
+│       ├── CMakeLists.txt
+│       └── package.xml
+├── README.md
+└── .gitignore
+```
 ## Requirements
 - Ubuntu 20.04 / 22.04
 - ROS Noetic / Melodic
@@ -47,13 +67,13 @@ source devel/setup.bash
 ## Video
 ## Reflection
 
-1. What I Learned
+### (a) What Did You Learn?
 
 ROS Integration with Deep Learning: Learned how to bridge ROS messages with PyTorch models using cv_bridge and create seamless image processing pipelines.
 
  Real-time Visualization: Developed skills in creating interactive UIs that display detection results in real-time while maintaining ROS communication.
 
-2. AI Tools Usage
+### (b) How Did You Use AI Tools?
 
 I used GitHub Copilot and ChatGPT to:
 
@@ -64,13 +84,13 @@ I used GitHub Copilot and ChatGPT to:
 Benefits: Faster development, learning best practices
 Limitations: Sometimes generated code needed manual adjustment for ROS-specific features
 
-3. Improving Accuracy
+### (c) How to Improve Accuracy?
 
 Fine-tune on UAS Dataset: Train YOLOv5 on drone-captured vehicle images to adapt to aerial viewpoints
 
 Implement Multi-scale Detection: Process images at multiple resolutions to detect vehicles at different altitudes
 
-4. Real-world Challenges
+### (d) Real-World Challenges
 
 Processing Speed: Limited onboard computing on drones requires model optimization (quantization, pruning)
 
