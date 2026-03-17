@@ -41,7 +41,7 @@ vehicle_detection_ros/
 └── .gitignore
 ```
 ## How to Run 
-## Installation
+### Installation
 ```bash
 # Create catkin workspace
 mkdir -p ~/catkin_ws/src
