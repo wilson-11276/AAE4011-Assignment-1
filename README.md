@@ -49,8 +49,9 @@ source devel/setup.bash
 
 1. What I Learned
 
-1. ROS Integration with Deep Learning: Learned how to bridge ROS messages with PyTorch models using cv_bridge and create seamless image processing pipelines.
-2. Real-time Visualization: Developed skills in creating interactive UIs that display detection results in real-time while maintaining ROS communication.
+ROS Integration with Deep Learning: Learned how to bridge ROS messages with PyTorch models using cv_bridge and create seamless image processing pipelines.
+
+ Real-time Visualization: Developed skills in creating interactive UIs that display detection results in real-time while maintaining ROS communication.
 
 2. AI Tools Usage
 
@@ -65,10 +66,12 @@ Limitations: Sometimes generated code needed manual adjustment for ROS-specific 
 
 3. Improving Accuracy
 
-1. Fine-tune on UAS Dataset: Train YOLOv5 on drone-captured vehicle images to adapt to aerial viewpoints
-2. Implement Multi-scale Detection: Process images at multiple resolutions to detect vehicles at different altitudes
+Fine-tune on UAS Dataset: Train YOLOv5 on drone-captured vehicle images to adapt to aerial viewpoints
+
+Implement Multi-scale Detection: Process images at multiple resolutions to detect vehicles at different altitudes
 
 4. Real-world Challenges
 
-1. Processing Speed: Limited onboard computing on drones requires model optimization (quantization, pruning)
-2. Environmental Factors: Changing lighting conditions, weather, and motion blur affect detection reliability
+Processing Speed: Limited onboard computing on drones requires model optimization (quantization, pruning)
+
+Environmental Factors: Changing lighting conditions, weather, and motion blur affect detection reliability
