@@ -43,3 +43,31 @@ rosdep install --from-paths src --ignore-src -r -y
 # Build package
 catkin_make
 source devel/setup.bash
+
+##Reflection
+
+What I Learned
+
+1. ROS Integration with Deep Learning: Learned how to bridge ROS messages with PyTorch models using cv_bridge and create seamless image processing pipelines.
+2. Real-time Visualization: Developed skills in creating interactive UIs that display detection results in real-time while maintaining ROS communication.
+
+AI Tools Usage
+
+I used GitHub Copilot and ChatGPT to:
+
+· Generate boilerplate code for ROS nodes
+· Debug YOLOv5 integration issues
+· Optimize image processing pipeline
+
+Benefits: Faster development, learning best practices
+Limitations: Sometimes generated code needed manual adjustment for ROS-specific features
+
+Improving Accuracy
+
+1. Fine-tune on UAS Dataset: Train YOLOv5 on drone-captured vehicle images to adapt to aerial viewpoints
+2. Implement Multi-scale Detection: Process images at multiple resolutions to detect vehicles at different altitudes
+
+Real-world Challenges
+
+1. Processing Speed: Limited onboard computing on drones requires model optimization (quantization, pruning)
+2. Environmental Factors: Changing lighting conditions, weather, and motion blur affect detection reliability
