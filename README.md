@@ -26,6 +26,24 @@ This ROS package implements a real-time vehicle detection system using YOLOv5 de
 - PyTorch
 - OpenCV
 - YOLOv5
+
+## Installation
+```bash
+# Create catkin workspace
+mkdir -p ~/catkin_ws/src
+cd ~/catkin_ws/src
+
+# Clone repository
+git clone https://github.com/YOUR_USERNAME/vehicle_detection_ros.git
+
+# Install dependencies
+cd ~/catkin_ws
+rosdep install --from-paths src --ignore-src -r -y
+
+# Build package
+catkin_make
+source devel/setup.bash
+```
 ## Video
 ## Reflection
 
@@ -54,22 +72,5 @@ Real-world Challenges
 
 1. Processing Speed: Limited onboard computing on drones requires model optimization (quantization, pruning)
 2. Environmental Factors: Changing lighting conditions, weather, and motion blur affect detection reliability
-
-## Installation
-```bash
-# Create catkin workspace
-mkdir -p ~/catkin_ws/src
-cd ~/catkin_ws/src
-
-# Clone repository
-git clone https://github.com/YOUR_USERNAME/vehicle_detection_ros.git
-
-# Install dependencies
-cd ~/catkin_ws
-rosdep install --from-paths src --ignore-src -r -y
-
-# Build package
-catkin_make
-source devel/setup.bash
 
 
